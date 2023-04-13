@@ -1,0 +1,15 @@
+
+<div appAppColor (click)="redirect(user)" *ngFor="let user of users">
+  <span> {{user.id}} </span>
+  <span> {{user.nom}} </span>
+  <span> {{user.prenom}} </span>
+  <span> {{user.profession}} </span>
+</div>
+
+
+<div class="container">
+  <input type="text" [(ngModel)]="search">
+  <div *ngFor="let user of searchTab | filter:search">
+    {{user}}
+  </div>
+</div>
